@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title | default(value="Systeminformationen") }}</title>
+    <style>
+    {% raw %}
+        body { font-family: sans-serif; }
+        table { border-collapse: collapse; width: 60%; margin: 20px auto; }
+        th, td { border: 1px solid #dddddd; text-align: left; padding: 8px; }
+        th { background-color: #f2f2f2; }
+        h1 { text-align: center; }
+    {% endraw %}
+    </style>
+</head>
+<body>
+    <h1>{{ title | default(value="Systeminformationen") }}</h1>
+    {% block content %}
+    <p>Kein Inhalt wurde bereitgestellt.</p>
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,34 @@
+{% extends "base" %}
+
+{% block content %}
+<table>
+    <tr>
+        <th>Kategorie</th>
+        <th>Information</th>
+    </tr>
+    <tr>
+        <td>Betriebssystem</td>
+        <td>{{ os_name }} {{ os_version }}</td>
+    </tr>
+    <tr>
+        <td>Kernel-Version</td>
+        <td>{{ kernel_version }}</td>
+    </tr>
+    <tr>
+        <td>CPU-Modell</td>
+        <td>{{ cpu_model }}</td>
+    </tr>
+    <tr>
+        <td>Anzahl der Kerne</td>
+        <td>{{ core_count }}</td>
+    </tr>
+    <tr>
+        <td>Arbeitsspeicher</td>
+        <td>{{ memory }} GB</td>
+    </tr>
+    <tr>
+        <td>Hostname</td>
+        <td>{{ hostname }}</td>
+    </tr>
+</table>
+{% endblock content %}
