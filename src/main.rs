@@ -6,9 +6,17 @@ use serde::Serialize;
 use std::env;
 use sysinfo::{CpuExt, System, SystemExt};
 
+#[derive(Serialize)]
+struct IndexContext {
+    title: String,
+}
+
 #[get("/")]
-fn index() -> &'static str {
-    "Hello, world! Besuche /info für Systeminformationen oder /env für Umgebungsvariablen."
+fn index() -> Template {
+    let context = IndexContext {
+        title: "Willkommen bei RocketOne".to_string(),
+    };
+    Template::render("index", &context)
 }
 
 #[derive(Serialize)]

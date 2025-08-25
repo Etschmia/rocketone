@@ -1,0 +1,14 @@
+{% extends "base" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Willkommen bei RocketOne!</h1>
+        <p class="lead">Dies ist eine einfache Webanwendung, die mit dem Rust-Framework Rocket erstellt wurde.</p>
+        <hr class="my-4">
+        <p>Wählen Sie eine der folgenden Optionen, um mehr über das System zu erfahren.</p>
+        <a class="btn btn-primary btn-lg" href="/info" role="button">Systeminformationen</a>
+        <a class="btn btn-secondary btn-lg" href="/env" role="button">Umgebungsvariablen</a>
+    </div>
+</div>
+{% endblock content %}
